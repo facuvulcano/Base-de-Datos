@@ -1,0 +1,11 @@
+
+
+RELACION                                     PK                          CK                       FK
+
+pers(DNI, nombre, genero)                   {DNI}                        {DNI}                     ---
+
+hijoDe(DNIP, DNIH)                       {DNIP, DNIH}                  {DNIP, DNIH}             {DNIP} ref pers
+                                                                                                {DNIH} red pers
+
+CasadaCon(DNI1, DNI2, fecha)            {DNI1, DNI2}                   {DNI1}, {DNI2}           {DNI1} ref pers
+                                                                                                {DNI2} ref pers
